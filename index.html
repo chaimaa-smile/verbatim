@@ -1,0 +1,25 @@
+
+<html>
+<head>
+<title>SUGARCRM</title>
+</head>
+<body>
+
+
+
+<form action =<?=$path> method = "POST">
+    <label for="fname">Nombre des clients :</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname"> Verbatims :</label><br>
+  <input type="number" id="lname" name="lname"><br><br>
+   <input type = "submit" value = "Run the Program!!!">
+    <?php
+    $param1 = $_POST['fname'];
+    $param2 = $_POST['lname'];
+    $path="/home/chana/verbatim_project/query.py query  -m /home/chana/verbatim_project/mysql_conf -n ".$param2." -f minimal ' ".$param1." '" ;
+    echo $path;
+    ?>
+</form>
+</body>
+ </html>
+
